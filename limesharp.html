@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h2>Limesharp test</h2>
+      Task 1:
+      Make this work (repeat 3 times the contents of an array):
+      repeat([1,2,3]) //[1,2,3,1,2,3,1,2,3]
+      Your solution:
+      if we type in our console your function and repeat([1,2,3]) then the result should be [1,2,3,1,2,3,1,2,3]
+      <script type="text/javascript">
+         function repeat(arrayval){
+         const arrayvalues= arrayval;
+         const result = [].concat(...Array(3).fill(arrayvalues));     // in place of 3 we can take variable to change occurance 
+         return result;
+         }
+      </script>
+   </body>
+</html>
