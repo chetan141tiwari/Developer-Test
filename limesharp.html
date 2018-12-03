@@ -5,6 +5,7 @@
       Task 1:
       Make this work (repeat 3 times the contents of an array):
       repeat([1,2,3]) //[1,2,3,1,2,3,1,2,3]
+      <br/>
       Your solution:
       if we type in our console your function and repeat([1,2,3]) then the result should be [1,2,3,1,2,3,1,2,3]
       <script type="text/javascript">
@@ -18,6 +19,7 @@
          Task 2:
          Make this work (no vowels, lowercase except the first letter):
          reformat("liMeSHArp DeveLoper TEST") //Lmshrp dvlpr tst
+         <br/>
          Your solution:
          if we type in our console your function and reformat("liMeSHArp DeveLoper TEST") then the result should be Lmshrp dvlpr tst
       </p>
@@ -26,6 +28,36 @@
             newstr=string.replace(/[aeiou]/gi, '').toLowerCase();            //here it will lowercase the string and replace vowels
             return newstr.charAt(0).toUpperCase()+newstr.slice(1)		 // Uppercase first letter and concatenate with rest string 
          }
+      </script>
+      <p>
+         Task 3 (optional, for bonus points):
+         Make this work (without using any built in functions, only a for loop, return the next binary number in a string or as an array)
+         next_binary_number([1,0]) // [1,1]
+         // possible test cases:
+         // [1,0] => [1,1]
+         // [1,1] => [1,0,0]
+         // [1,1,0] => [1,1,1]
+         // .......
+         // [1,0,0,0,0,0,0,0,0,1] => [1,0,0,0,0,0,0,0,1,0]
+         <br/>
+         Your solution:
+         if we type in our console your function and next_binary_number([1,0,0,0,0,0,0,0,0,1]) then the result should look like 1,0,0,0,0,0,0,0,1,0 (or as an array).
+      </p>
+      <script type="text/javascript">
+         function next_binary_number(arrayvalues){
+            var last = arrayvalues[arrayvalues.length - 1];                       // get the last element
+            if(last==1){                                                          //Check if 1 
+             arrayvalues[arrayvalues.length-1] = 0;                               // added 0
+            }
+            
+            if(last==0)
+            {
+               arrayvalues[arrayvalues.length-1] = 1;
+            }
+            
+            return arrayvalues;
+         }
+         
       </script>
    </body>
 </html>
