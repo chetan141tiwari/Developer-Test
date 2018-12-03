@@ -9,9 +9,22 @@
       if we type in our console your function and repeat([1,2,3]) then the result should be [1,2,3,1,2,3,1,2,3]
       <script type="text/javascript">
          function repeat(arrayval){
-         const arrayvalues= arrayval;
-         const result = [].concat(...Array(3).fill(arrayvalues));     // in place of 3 we can take variable to change occurance 
-         return result;
+            const arrayvalues= arrayval;
+            const result = [].concat(...Array(3).fill(arrayvalues));     // in place of 3 we can take variable to change occurance 
+            return result;
+         }
+      </script>
+      <p>
+         Task 2:
+         Make this work (no vowels, lowercase except the first letter):
+         reformat("liMeSHArp DeveLoper TEST") //Lmshrp dvlpr tst
+         Your solution:
+         if we type in our console your function and reformat("liMeSHArp DeveLoper TEST") then the result should be Lmshrp dvlpr tst
+      </p>
+      <script type="text/javascript">
+         function reformat(string){
+            newstr=string.replace(/[aeiou]/gi, '').toLowerCase();            //here it will lowercase the string and replace vowels
+            return newstr.charAt(0).toUpperCase()+newstr.slice(1)		 // Uppercase first letter and concatenate with rest string 
          }
       </script>
    </body>
